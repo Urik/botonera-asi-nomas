@@ -14,8 +14,8 @@
       <div class="container">
         <h4 class="title is-4">Audios</h4>
         <div class="columns">
-          <div class="column"></div>
-          <div class="column is-half-desktop is-full-tablet">
+          <div class="column is-hidden-touch"></div>
+          <div class="column is-four-fifths-desktop is-full">
             <div class="play-buttons">
               <play-button v-for="(audio, i) in audios" 
                 v-bind:key="i" 
@@ -26,7 +26,7 @@
               </play-button>
             </div>
           </div>
-          <div class="column"></div>
+          <div class="column is-hidden-touch"></div>
         </div>
       </div>
     </section>
@@ -35,7 +35,7 @@
         <div class="title is-4">Musica</div>
         <div class="columns">
           <div class="column"></div>
-          <div class="column is-half-desktop is-full-tablet play-butons">
+          <div class="column is-four-fifths-desktop is-full play-butons">
             <div class="play-buttons">
               <play-button v-for="(audio, i) in music" 
                 v-bind:key="i" 

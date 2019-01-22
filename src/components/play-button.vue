@@ -69,12 +69,13 @@ export default {
         position: relative;
         
         .button-icon {
+            $border-color:	hsl(171, 100%, 41%);
             display: block;
             border-radius: 50%;
             border-style: solid;
             border-width: 3px;
-            background-color: red;
-            border-color: red;
+            background-color: $border-color;
+            border-color: $border-color;
             // Used to offset the 3px of border
             width: calc(100% - 6px);
             // Used to center the img in the parent
