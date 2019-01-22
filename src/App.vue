@@ -2,7 +2,7 @@
   <div id="app">
     <section class="section has-no-top-padding">
       <div class="container">
-        <h1 class="title is-1">Botonera asi nomas</h1>
+        <h1 class="title is-1">Botonera así nomás</h1>
       </div>
     </section>
     <section class="section has-no-top-padding">
@@ -32,7 +32,7 @@
     </section>
     <section class="section has-no-top-padding">
       <div class="container">
-        <div class="title is-4">Musica</div>
+        <div class="title is-4">Música</div>
         <div class="columns">
           <div class="column"></div>
           <div class="column is-four-fifths-desktop is-full play-butons">
@@ -50,6 +50,13 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          By Uri Berman Kleiner
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
