@@ -92,6 +92,7 @@ export default {
 
         .stop-button {
             opacity: 0.8;
+            width: 100%;
         }
 
         .stop-fade-enter-active, .stop-fade-leave-active {
