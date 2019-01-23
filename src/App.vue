@@ -5,11 +5,11 @@
         <h1 class="title is-1">Botonera así nomás</h1>
       </div>
     </section>
-    <section class="section has-no-top-padding">
+    <!-- <section class="section has-no-top-padding">
       <div class="container">
         <a v-on:click="this.loadAll" class="button is-primary is-large is-fullwidth">Cargar todos</a>
       </div>
-    </section>
+    </section> -->
     <section class="section has-no-top-padding">
       <div class="container">
         <h4 class="title is-4">Audios</h4>
@@ -79,8 +79,8 @@ export default {
   components: {
     PlayButton
   },
-  created() {
-    console.log(Audios);
+  mounted() {
+    this.loadAll();
   },
   methods: {
     loadAll() {
