@@ -3,5 +3,10 @@
     "name": "botonera-asi-nomas",
     "builds": [
         { "src": "package.json", "use": "@now/static-build" }
+    ],
+    "alias": [
+        "botonera.net",
+        "www.botonera.net",
+        "botoneraasinomas.com"
     ]
 }
