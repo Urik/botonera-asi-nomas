@@ -77,10 +77,13 @@ function getLoadedState(soundClip: Howl): State {
         },
 
         stop() {
+            const initialVolume = soundClip.volume();
             soundClip.fade(1, 0, 200);
-            new Promise((resolve, reject) => {
-                setTimeout(() => soundClip.stop(), 200);
-            })
+            setTimeout(() => {
+
+                soundClip.stop();
+                soundClip.volume(initialVolume);
+            }, 200);
         }
     }
 }
