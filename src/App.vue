@@ -9,7 +9,7 @@
       <div class="container">
         <a v-on:click="this.loadAll" class="button is-primary is-large is-fullwidth">Cargar todos</a>
       </div>
-    </section> -->
+    </section>s -->
     <section class="section has-no-top-padding">
       <div class="container">
         <h4 class="title is-4">Audios</h4>
