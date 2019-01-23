@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    test
     <section class="section has-no-top-padding">
       <div class="container">
         <h1 class="title is-1">Botonera así nomás</h1>
