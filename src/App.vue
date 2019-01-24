@@ -19,13 +19,15 @@
           <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full">
             <div class="play-buttons">
-              <play-button v-for="(audio, i) in audios" 
-                v-bind:key="i" 
-                v-bind:audio-url="audio.soundUrl" 
-                v-bind:img-url="audio.imgUrl" 
-                v-bind:name="audio.name"
-                ref="playButton">
-              </play-button>
+              <div v-for="(audio, i) in audios" :key="i" @contextmenu="download('download' + i, $event)">
+                <play-button 
+                  :audio-url="audio.soundUrl" 
+                  :img-url="audio.imgUrl" 
+                  :name="audio.name"
+                  ref="playButton">
+                </play-button>                
+                <a :href="audio.soundUrl" download hidden :ref="`download${i}`"></a>
+              </div>
             </div>
           </div>
           <div class="column is-hidden-touch"></div>
@@ -40,10 +42,10 @@
           <div class="column is-four-fifths-desktop is-full play-butons">
             <div class="play-buttons">
               <play-button v-for="(audio, i) in music" 
-                v-bind:key="i" 
-                v-bind:audio-url="audio.soundUrl" 
-                v-bind:img-url="audio.imgUrl" 
-                v-bind:name="audio.name"
+                :key="i" 
+                :audio-url="audio.soundUrl" 
+                :img-url="audio.imgUrl" 
+                :name="audio.name"
                 ref="playButton">
               </play-button>
             </div>
@@ -52,22 +54,15 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          Made with <strong><span class="has-text-danger">mucho amor</span></strong> by <strong>Uri Berman Kleiner</strong> for the <strong><span class="is-family-code">Te lo resumo así nomás</span></strong> community.
-        </p>
-        <div class="level"></div>
-      </div>
-    </footer>
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
 
 import PlayButton from './components/play-button.vue';
+import PageFooter from './components/page-footer.vue';
 import { Audios, Music } from './services/Audios';
-import madeWithBulma from './assets/images/made-with-bulma.png';
 
 const getAudioData = ([imgUrl, soundUrl, name]) => ({ soundUrl, imgUrl, name });
 
@@ -76,11 +71,11 @@ export default {
   props: {},
   data: () => ({
     audios: Audios.map(getAudioData),
-    music: Music.map(getAudioData),
-    bulmaIcon: madeWithBulma
+    music: Music.map(getAudioData)
   }),
   components: {
-    PlayButton
+    PlayButton,
+    PageFooter
   },
   mounted() {
     this.loadAll();
@@ -90,6 +85,12 @@ export default {
       for (let ref of this.$refs.playButton) {
         ref.loadSound();
       }
+    },
+    download(refIdentifier, event) {
+      for(const linkElem of this.$refs[refIdentifier]) {
+        linkElem.click();
+      }
+      event.preventDefault();
     }
   }
 };

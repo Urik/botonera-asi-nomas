@@ -1,16 +1,15 @@
 <template>
-    <div v-bind:class="{ 'is-loading': this.isLoading }">
+    <div :class="{ 'is-loading': this.isLoading }">
         <div class="button-icon-wrapper">
             <div class="icon centered-in-parent" v-if="this.isLoading">
                 <i class="fas fa-spinner fa-spin"></i>
             </div>
             <transition name="stop-fade">
-                <img v-if="this.isPlaying" v-on:click="stopSound" class="stop-button centered-in-parent" v-bind:src="this.stopIconPath" alt="">
+                <img v-if="this.isPlaying" @click="stopSound" class="stop-button centered-in-parent" :src="this.stopIconPath" alt="">
             </transition>
-            <img class="button-icon" v-bind:src="this.imgUrl" v-on:click="playSound" v-on:contextmenu="this.downloadSound">
+            <img class="button-icon" :src="this.imgUrl" @click="playSound">
         </div>
         {{this.name}}
-        <a download v-bind:href="this.audioUrl" hidden ref="downloadButton">TEST</a>
     </div>
 </template>
 
@@ -36,7 +35,6 @@ export default {
         this.soundClip = new SoundClip(this.audioUrl);
         this.soundClip.state$.pipe(takeUntil(this.destroy$)).subscribe(newState => this.isLoading = newState === 'loading');
         this.soundClip.playing$.pipe(takeUntil(this.destroy$)).subscribe((isPlaying) => {
-            console.log(isPlaying);
             this.isPlaying = isPlaying;
         });
     },
@@ -47,10 +45,6 @@ export default {
     methods: {
         playSound() {
             return this.soundClip.play();
-        },
-        downloadSound(e) {
-            e.preventDefault();
-            this.$refs.downloadButton.click();
         },
         stopSound() {
             return this.soundClip.stop();
