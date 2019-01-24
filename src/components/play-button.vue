@@ -7,9 +7,10 @@
             <transition name="stop-fade">
                 <img v-if="this.isPlaying" v-on:click="stopSound" class="stop-button centered-in-parent" v-bind:src="this.stopIconPath" alt="">
             </transition>
-            <img class="button-icon" v-bind:src="this.imgUrl" v-on:click="playSound">
+            <img class="button-icon" v-bind:src="this.imgUrl" v-on:click="playSound" v-on:contextmenu="this.downloadSound">
         </div>
         {{this.name}}
+        <a download v-bind:href="this.audioUrl" hidden ref="downloadButton">TEST</a>
     </div>
 </template>
 
@@ -46,6 +47,10 @@ export default {
     methods: {
         playSound() {
             return this.soundClip.play();
+        },
+        downloadSound(e) {
+            e.preventDefault();
+            this.$refs.downloadButton.click();
         },
         stopSound() {
             return this.soundClip.stop();
