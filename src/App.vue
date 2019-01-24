@@ -131,10 +131,5 @@ export default {
 
 .play-button-wrapper {
   cursor: pointer;
-  transition: transform 0.1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.2);
-  }
 }
 </style>
