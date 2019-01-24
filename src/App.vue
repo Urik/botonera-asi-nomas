@@ -19,14 +19,14 @@
           <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full">
             <div class="play-buttons">
-              <div v-for="(audio, i) in audios" :key="i" @contextmenu="download('download' + i, $event)">
+              <div v-for="(audio, i) in audios" :key="i" @contextmenu="download('downloadAudio' + i, $event)">
                 <play-button 
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
                   :name="audio.name"
                   ref="playButton">
                 </play-button>                
-                <a :href="audio.soundUrl" download hidden :ref="`download${i}`"></a>
+                <a :href="audio.soundUrl" download hidden :ref="`downloadAudio${i}`"></a>
               </div>
             </div>
           </div>
@@ -38,19 +38,21 @@
       <div class="container">
         <div class="title is-4">Música</div>
         <div class="columns">
-          <div class="column"></div>
+          <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full play-butons">
             <div class="play-buttons">
-              <play-button v-for="(audio, i) in music" 
-                :key="i" 
-                :audio-url="audio.soundUrl" 
-                :img-url="audio.imgUrl" 
-                :name="audio.name"
-                ref="playButton">
-              </play-button>
+              <div v-for="(audio, i) in music" :key="i" @contextmenu="download('downloadMusic' + i, $event)">
+                <play-button
+                  :audio-url="audio.soundUrl" 
+                  :img-url="audio.imgUrl" 
+                  :name="audio.name"
+                  ref="playButton">
+                </play-button>
+                <a :href="audio.soundUrl" download hidden :ref="`downloadMusic${i}`"></a>
+              </div>
             </div>
           </div>
-          <div class="column"></div>
+          <div class="column is-hidden-touch"></div>
         </div>
       </div>
     </section>
