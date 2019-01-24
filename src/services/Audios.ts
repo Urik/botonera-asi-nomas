@@ -11,6 +11,7 @@ export const Audios = [
     media(require('../assets/images/is_it_confirmed.jpg'), require('../assets/audios/is it confirmed.mp3')),
     media(require('../assets/images/soraya2.jpg'), require('../assets/audios/estas_con_la_lisiada.mp3')),
     media(require('../assets/images/soraya3.jpg'), require('../assets/audios/maldita_lisiada.mp3')),
+    media(require('../assets/images/agripina.jpg'), require('../assets/audios/agripina.mp3')),
     media(require('../assets/images/yamcha.jpg'), require('../assets/audios/yamcha.mp3')),
     media(require('../assets/images/echarri.jpg'), require('../assets/audios/increible.mp3')),
     media(require('../assets/images/chingawat.jpg'), require('../assets/audios/chingawat.mp3')),
