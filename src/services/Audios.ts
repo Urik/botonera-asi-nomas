@@ -9,6 +9,8 @@ function media(imgFileName: string, audioFileName: string, text = '') {
 export const Audios = [
     media('conan.jpg', 'conan.mp3'),
     media('is_it_confirmed.jpg', 'is it confirmed.mp3'),
+    media('soraya2.jpg', 'estas_con_la_lisiada.mp3'),
+    media('soraya3.jpg', 'maldita_lisiada.mp3'),
     media('yamcha.jpg', 'yamcha.mp3'),
     media('echarri.jpg', 'increible.mp3'),
     media('chingawat.jpg', 'chingawat.mp3'),
@@ -23,5 +25,8 @@ export const Music = [
     media('ryu.jpg', 'ryu_music.mp3', ''),
     media('goku1.jpg', 'dbz_fight1.mp3', ''),
     media('psycho_killer.jpg', 'psycho_killer.mp3'),
-    media('ultraviolento.jpg', 'ultraviolento.mp3')
+    media('ultraviolento.jpg', 'ultraviolento.mp3'),
+    media('soraya1.jpg', 'soraya.mp3'),
+    media('alf.jpg', 'alf.mp3'),
+    media('goku2.jpg', 'dbz_fight2.mp3')
 ]
