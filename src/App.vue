@@ -19,7 +19,7 @@
           <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full">
             <div class="play-buttons">
-              <div v-for="(audio, i) in audios" :key="i" @contextmenu="download('downloadAudio' + i, $event)">
+              <div class="play-button-wrapper" v-for="(audio, i) in audios" :key="i" @contextmenu="download('downloadAudio' + i, $event)">
                 <play-button 
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
@@ -41,7 +41,7 @@
           <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full play-butons">
             <div class="play-buttons">
-              <div v-for="(audio, i) in music" :key="i" @contextmenu="download('downloadMusic' + i, $event)">
+              <div class="play-button-wrapper" v-for="(audio, i) in music" :key="i" @contextmenu="download('downloadMusic' + i, $event)">
                 <play-button
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
@@ -127,5 +127,14 @@ export default {
 .section.title-section {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.play-button-wrapper {
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 </style>
