@@ -31,7 +31,8 @@ export const Audios = [
     media('palanca.jpg', 'tranca_palanca.mp3', '', 'tranca palanca'),
     media('pero_pero_pero.jpg', 'pero_pero_pero.mp3', '', 'Pero pero peroooo'),
     media('aaa.jpg', 'aaa.mp3', '', 'Aaaaaaaaaaaaaaaaah'),
-    media('ackbar.jpg', 'ackbar.mp3', '', 'It\'s a trap!')
+    media('ackbar.jpg', 'ackbar.mp3', '', 'It\'s a trap!'),
+    media('besitos.jpg', 'besitos.mp3', '', 'Besitos besitos chau chau')
 ];
 
 export const Music = [
