@@ -27,7 +27,6 @@
                   :imgAlt="audio.imgAlt"
                   ref="playButton">
                 </play-button>                
-                <a :href="audio.soundUrl" download hidden :ref="`downloadAudio${i}`"></a>
               </div>
             </div>
           </div>
@@ -50,7 +49,6 @@
                   :imgAlt="audio.imgAlt"
                   ref="playButton">
                 </play-button>
-                <a :href="audio.soundUrl" download hidden :ref="`downloadMusic${i}`"></a>
               </div>
             </div>
           </div>
