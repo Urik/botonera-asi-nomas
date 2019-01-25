@@ -44,7 +44,7 @@ export const Music = [
     media('goku2.jpg', 'dbz_fight2.mp3'),
     media('heman.jpg', 'heman.mp3'),
     media('ryu.jpg', 'ryu_music.mp3'),
+    media('lost.jpg', 'lost.mp3', '', 'Jack crying'),
     media('soraya1.jpg', 'soraya.mp3'),
-    media('bycicle.jpg', 'villanos.mp3'),
-    media('lost.jpg', 'lost.mp3', '', 'Jack crying')
+    media('bycicle.jpg', 'villanos.mp3')
 ]
