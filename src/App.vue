@@ -19,7 +19,7 @@
           <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full">
             <div class="play-buttons">
-              <div class="play-button-wrapper" v-for="(audio, i) in audios" :key="i" @contextmenu="download('downloadAudio' + i, $event)">
+              <div class="play-button-wrapper" v-for="(audio, i) in audios" :key="i" @contextmenu="download(audio.soundUrl, $event)">
                 <play-button 
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
@@ -42,7 +42,7 @@
           <div class="column is-hidden-touch"></div>
           <div class="column is-four-fifths-desktop is-full play-butons">
             <div class="play-buttons">
-              <div class="play-button-wrapper" v-for="(audio, i) in music" :key="i" @contextmenu="download('downloadMusic' + i, $event)">
+              <div class="play-button-wrapper" v-for="(audio, i) in music" :key="i" @contextmenu="download(audio.soundUrl, $event)">
                 <play-button
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
@@ -67,6 +67,7 @@
 import PlayButton from './components/play-button.vue';
 import PageFooter from './components/page-footer.vue';
 import { Audios, Music } from './services/Audios';
+import downloader from 'downloadjs';
 
 const getAudioData = ([imgUrl, soundUrl, name, imgAlt]) => ({ soundUrl, imgUrl, name, imgAlt });
 
@@ -90,10 +91,11 @@ export default {
         ref.loadSound();
       }
     },
-    download(refIdentifier, event) {
-      for(const linkElem of this.$refs[refIdentifier]) {
-        linkElem.click();
-      }
+    download(path, event) {
+      downloader(path);
+      // for(const linkElem of this.$refs[refIdentifier]) {
+      //   linkElem.click();
+      // }
       event.preventDefault();
     }
   }
