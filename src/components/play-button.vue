@@ -5,9 +5,9 @@
                 <i class="fas fa-spinner fa-spin"></i>
             </div>
             <transition name="stop-fade">
-                <img v-if="this.isPlaying" @click="stopSound" class="stop-button centered-in-parent" :src="this.stopIconPath" alt="">
+                <img v-if="this.isPlaying" @click="stopSound" class="stop-button centered-in-parent" :src="this.stopIconPath">
             </transition>
-            <img class="button-icon" :src="this.imgUrl" @click="playSound">
+            <img class="button-icon" :src="this.imgUrl" @click="playSound" :alt="this.imgAlt">
         </div>
         {{this.name}}
     </div>
@@ -23,7 +23,8 @@ export default {
     props: {
         name: String,
         imgUrl: String,
-        audioUrl: String
+        audioUrl: String,
+        imgAlt: String
     },
     data: () => ({
         isLoading: false,

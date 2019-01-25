@@ -29,7 +29,9 @@ export const Audios = [
     media('patranas.jpg', 'patranas.mp3', '', 'Patrañas!'),
     media('amor_heterosexual.jpg', 'amor_heterosexual.mp3', '', 'Amor heterosecual'),
     media('palanca.jpg', 'tranca_palanca.mp3', '', 'tranca palanca'),
-    media('pero_pero_pero.jpg', 'pero_pero_pero.mp3', '', 'Pero pero peroooo')
+    media('pero_pero_pero.jpg', 'pero_pero_pero.mp3', '', 'Pero pero peroooo'),
+    media('aaa.jpg', 'aaa.mp3', '', 'Aaaaaaaaaaaaaaaaah'),
+    media('ackbar.jpg', 'ackbar.mp3', '', 'It\'s a trap!')
 ];
 
 export const Music = [
@@ -42,5 +44,6 @@ export const Music = [
     media('heman.jpg', 'heman.mp3'),
     media('ryu.jpg', 'ryu_music.mp3'),
     media('soraya1.jpg', 'soraya.mp3'),
-    media('bycicle.jpg', 'villanos.mp3')
+    media('bycicle.jpg', 'villanos.mp3'),
+    media('lost.jpg', 'lost.mp3', '', 'Jack crying')
 ]

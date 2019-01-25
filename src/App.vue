@@ -24,6 +24,7 @@
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
                   :name="audio.name"
+                  :imgAlt="audio.imgAlt"
                   ref="playButton">
                 </play-button>                
                 <a :href="audio.soundUrl" download hidden :ref="`downloadAudio${i}`"></a>
@@ -46,6 +47,7 @@
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
                   :name="audio.name"
+                  :imgAlt="audio.imgAlt"
                   ref="playButton">
                 </play-button>
                 <a :href="audio.soundUrl" download hidden :ref="`downloadMusic${i}`"></a>
@@ -66,7 +68,7 @@ import PlayButton from './components/play-button.vue';
 import PageFooter from './components/page-footer.vue';
 import { Audios, Music } from './services/Audios';
 
-const getAudioData = ([imgUrl, soundUrl, name]) => ({ soundUrl, imgUrl, name });
+const getAudioData = ([imgUrl, soundUrl, name, imgAlt]) => ({ soundUrl, imgUrl, name, imgAlt });
 
 export default {
   name: 'app',
