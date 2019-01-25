@@ -2,34 +2,45 @@ const baseUrl = '';
 const imagesUrl = `${baseUrl}assets/images`;
 const audiosUrl = `${baseUrl}assets/audios`;
 
-function media(imgFileName: string, audioFileName: string, text = '') {
-    return [`${imgFileName}`, `${audioFileName}`, text];
+function media(imgFileName: string, audioFileName: string, text = '', altText = '') {
+    return [requireImage(imgFileName), requireAudio(audioFileName), text, altText];
 }
 
+function requireImage(imgUrl: string) {
+    return require('../assets/images/' + imgUrl);
+} 
+
+function requireAudio(audioUrl: string) {
+    return require('../assets/audios/' + audioUrl);
+} 
+
 export const Audios = [
-    media(require('../assets/images/conan.jpg'), require('../assets/audios/conan.mp3')),
-    media(require('../assets/images/is_it_confirmed.jpg'), require('../assets/audios/is it confirmed.mp3')),
-    media(require('../assets/images/soraya2.jpg'), require('../assets/audios/estas_con_la_lisiada.mp3')),
-    media(require('../assets/images/soraya3.jpg'), require('../assets/audios/maldita_lisiada.mp3')),
-    media(require('../assets/images/agripina.jpg'), require('../assets/audios/agripina.mp3')),
-    media(require('../assets/images/yamcha.jpg'), require('../assets/audios/yamcha.mp3')),
-    media(require('../assets/images/echarri.jpg'), require('../assets/audios/increible.mp3')),
-    media(require('../assets/images/chingawat.jpg'), require('../assets/audios/chingawat.mp3')),
-    media(require('../assets/images/risa.jpg'), require('../assets/audios/risa.mp3')),
-    media(require('../assets/images/no_lo_puedo_creer.jpg'), require('../assets/audios/no_lo_puedo_creer.mp3')),
-    media(require('../assets/images/maradona1.jpg'), require('../assets/audios/maradona1.mp3')),
-    media(require('../assets/images/patranas.jpg'), require('../assets/audios/patranas.mp3')),
-    media(require('../assets/images/amor_heterosexual.jpg'), require('../assets/audios/amor_heterosexual.mp3'))
+    media('conan.jpg', 'conan.mp3', undefined, 'Mira con la cara que te mira Conan'),
+    media('is_it_confirmed.jpg', 'is it confirmed.mp3', '', 'Is it confirmed?'),
+    media('soraya2.jpg', 'estas_con_la_lisiada.mp3', '', 'Maldita lisiada 1'),
+    media('soraya3.jpg', 'maldita_lisiada.mp3', '', 'Maldita lisiada 2'),
+    media('agripina.jpg', 'agripina.mp3', '', 'Cuidado agripina!'),
+    media('yamcha.jpg', 'yamcha.mp3', '', 'No puede ser Ten Shin Han!'),
+    media('echarri.jpg', 'increible.mp3', '', 'Pablo Echarri increible!'),
+    media('chingawat.jpg', 'chingawat.mp3', '', 'Machete Chingawat!?'),
+    media('risa.jpg', 'risa.mp3'),
+    media('no_lo_puedo_creer.jpg', 'no_lo_puedo_creer.mp3', '', 'Uy no lo puedo creer'),
+    media('maradona1.jpg', 'maradona1.mp3', '', 'Maradona decile no a las drogas'),
+    media('patranas.jpg', 'patranas.mp3', '', 'Patrañas!'),
+    media('amor_heterosexual.jpg', 'amor_heterosexual.mp3', '', 'Amor heterosecual'),
+    media('palanca.jpg', 'tranca_palanca.mp3', '', 'tranca palanca'),
+    media('pero_pero_pero.jpg', 'pero_pero_pero.mp3', '', 'Pero pero peroooo')
 ];
 
 export const Music = [
-    media(require('../assets/images/psycho_killer.jpg'), require('../assets/audios/psycho_killer.mp3')),
-    media(require('../assets/images/ultraviolento.jpg'), require('../assets/audios/ultraviolento.mp3')),
-    media(require('../assets/images/alf.jpg'), require('../assets/audios/alf.mp3')),
-    media(require('../assets/images/goku1.jpg'), require('../assets/audios/dbz_fight1.mp3')),
-    media(require('../assets/images/goku2.jpg'), require('../assets/audios/dbz_fight2.mp3')),
-    media(require('../assets/images/heman.jpg'), require('../assets/audios/heman.mp3')),
-    media(require('../assets/images/ryu.jpg'), require('../assets/audios/ryu_music.mp3')),
-    media(require('../assets/images/soraya1.jpg'), require('../assets/audios/soraya.mp3')),
-    media(require('../assets/images/bycicle.jpg'), require('../assets/audios/villanos.mp3'))
+    media('alf.jpg', 'alf.mp3'),
+    media('psycho_killer.jpg', 'psycho_killer.mp3'),
+    media('ultraviolento.jpg', 'ultraviolento.mp3'),
+    media('kevin_johansen.jpg', 'kevin_johansen.mp3', '', 'I\'m gonna get down with my baby'),
+    media('goku1.jpg', 'dbz_fight1.mp3'),
+    media('goku2.jpg', 'dbz_fight2.mp3'),
+    media('heman.jpg', 'heman.mp3'),
+    media('ryu.jpg', 'ryu_music.mp3'),
+    media('soraya1.jpg', 'soraya.mp3'),
+    media('bycicle.jpg', 'villanos.mp3')
 ]
