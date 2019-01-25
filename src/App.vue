@@ -91,10 +91,8 @@ export default {
     },
     download(path, event) {
       downloader(path);
-      // for(const linkElem of this.$refs[refIdentifier]) {
-      //   linkElem.click();
-      // }
       event.preventDefault();
+      return false;
     }
   }
 };
@@ -133,7 +131,5 @@ export default {
 
 .play-button-wrapper {
   cursor: pointer;
-  -webkit-user-select: none; /* disable selection/Copy of UIWebView */
-  -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
 }
 </style>
