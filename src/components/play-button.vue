@@ -53,6 +53,7 @@ export default {
             return this.soundClip.play();
         },
         stopSound() {
+            this.isPlaying = false;
             return this.soundClip.stop();
         },
         loadSound() {
