@@ -24,7 +24,8 @@ export default {
         name: String,
         imgUrl: String,
         audioUrl: String,
-        imgAlt: String
+        imgAlt: String,
+        autoFetch: Boolean
     },
     data: () => ({
         isLoading: false,
@@ -38,6 +39,10 @@ export default {
         this.soundClip.playing$.pipe(takeUntil(this.destroy$)).subscribe((isPlaying) => {
             this.isPlaying = isPlaying;
         });
+        
+        if (this.autoFetch) {
+            this.loadSound();
+        }
     },
     destryed() {
         this.destroy$.next();

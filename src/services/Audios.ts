@@ -3,7 +3,7 @@ const imagesUrl = `${baseUrl}assets/images`;
 const audiosUrl = `${baseUrl}assets/audios`;
 
 function media(imgFileName: string, audioFileName: string, autoFetch: boolean, text = '', altText = '') {
-    return [requireImage(imgFileName), requireAudio(audioFileName), text, altText];
+    return [requireImage(imgFileName), requireAudio(audioFileName), autoFetch, text, altText];
 }
 
 function requireImage(imgUrl: string) {

@@ -24,7 +24,8 @@
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
                   :name="audio.name"
-                  :imgAlt="audio.imgAlt"
+                  :img-alt="audio.imgAlt"
+                  :auto-fetch="audio.autoFetch"
                   ref="playButton">
                 </play-button>                
               </div>
@@ -46,7 +47,8 @@
                   :audio-url="audio.soundUrl" 
                   :img-url="audio.imgUrl" 
                   :name="audio.name"
-                  :imgAlt="audio.imgAlt"
+                  :img-alt="audio.imgAlt"
+                  :auto-fetch="audio.autoFetch"
                   ref="playButton">
                 </play-button>
               </div>
@@ -67,7 +69,7 @@ import PageFooter from './components/page-footer.vue';
 import { Audios, Music } from './services/Audios';
 import downloader from 'downloadjs';
 
-const getAudioData = ([imgUrl, soundUrl, name, imgAlt]) => ({ soundUrl, imgUrl, name, imgAlt });
+const getAudioData = ([imgUrl, soundUrl, autoFetch, name, imgAlt]) => ({ soundUrl, imgUrl, autoFetch, name, imgAlt });
 
 export default {
   name: 'app',
@@ -81,14 +83,8 @@ export default {
     PageFooter
   },
   mounted() {
-    this.loadAll();
   },
   methods: {
-    loadAll() {
-      for (let ref of this.$refs.playButton) {
-        ref.loadSound();
-      }
-    },
     download(path, event) {
       downloader(path);
       event.preventDefault();
