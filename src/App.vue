@@ -127,5 +127,6 @@ export default {
 
 .play-button-wrapper {
   cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 </style>
