@@ -49,5 +49,6 @@ export const Music = [
     media('ryu.jpg', 'ryu_music.mp3', false),
     media('lost.jpg', 'lost.mp3', false, '', 'Jack crying'),
     media('soraya1.jpg', 'soraya.mp3', false),
-    media('bycicle.jpg', 'villanos.mp3', false)
-]
+    media('bycicle.jpg', 'villanos.mp3', false),
+    media('alien.jpg', 'alien.mp3', false)
+];
