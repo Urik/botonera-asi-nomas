@@ -8,5 +8,5 @@ Access http://botonera.net/ or https://www.botoneraasinomas.com/ for a live prev
 
 Made using:  
 [VueJS](https://vuejs.org/)  
-[Bulma](http://bulma.io/)
+[Bulma](http://bulma.io/)  
 [ZEIT](http://zeit.co/)
