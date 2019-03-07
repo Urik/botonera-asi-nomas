@@ -1,34 +1,10 @@
-# te-lo-resumo-botonera
+# Botonera así nomás
 
-## Project setup
-```
-npm install
-```
+Unofficial buttonboard for **[Te lo resumo así nomás](https://www.youtube.com/channel/UCw7Bz6EHxlnOoBUBlJZCWCw)**, in order to share audio clips from your favorite YouTube channel!
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Technologies
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Made using:  
+[VueJS](https://vuejs.org/)  
+[Bulma](http://bulma.io/)
+[ZEIT](http://zeit.co/)
