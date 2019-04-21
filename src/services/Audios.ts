@@ -16,7 +16,7 @@ function requireAudio(audioUrl: string) {
 
 export const Audios = [
     media('conan.jpg', 'conan.mp3', true, '', 'Mira con la cara que te mira Conan'),
-    media('is_it_confirmed.jpg', 'is it confirmed.mp3', true, '', 'Is it confirmed?'),
+    media('is_it_confirmed.jpg', 'is_it_confirmed.mp3', true, '', 'Is it confirmed?'),
     media('soraya2.jpg', 'estas_con_la_lisiada.mp3', true, '', 'Maldita lisiada 1'),
     media('soraya3.jpg', 'maldita_lisiada.mp3', true, '', 'Maldita lisiada 2'),
     media('agripina.jpg', 'agripina.mp3', true, '', 'Cuidado agripina!'),
