@@ -25,6 +25,10 @@ export const Audios = [
     media('chingawat.jpg', 'chingawat.mp3', true, '', 'Machete Chingawat!?'),
     media('risa.jpg', 'risa.mp3', true),
     media('no_lo_puedo_creer.jpg', 'no_lo_puedo_creer.mp3', true, '', 'Uy no lo puedo creer'),
+    media('thats_awesome.jpg', 'thats_awesome.mp3', true, '', 'Duuuude that\'s awesome!'),
+    media('bojack_what.jpg', 'bojack_what.mp3', true, '', 'Whaaaaaaat?'),
+    media('sure.jpg', 'sure.mp3', true, '', 'Sure!'),
+    media('you_must_be_kidding.jpg', 'you_must_be_kidding.mp3', true, '', 'You must be kidding'),
     media('maradona1.jpg', 'maradona1.mp3', true, '', 'Maradona decile no a las drogas'),
     media('patranas.jpg', 'patranas.mp3', true, '', 'Patrañas!'),
     media('amor_heterosexual.jpg', 'amor_heterosexual.mp3', true, '', 'Amor heterosecual'),
@@ -35,7 +39,7 @@ export const Audios = [
     media('canchero1.jpg', 'canchero1.mp3', true, '', 'Canchero 1'),
     media('canchero2.jpg', 'canchero2.mp3', true, '', 'Canchero 2'),
     media('velociraptor1.jpg', 'defenderlo.mp3', true, '', 'Este tipo es re canchero, voy a defenderlo'),
-    media('besitos.jpg', 'besitos.mp3', true, '', 'Besitos besitos chau chau'),
+    media('besitos.jpg', 'besitos.mp3', true, '', 'Besitos besitos chau chau')
 ];
 
 export const Music = [
