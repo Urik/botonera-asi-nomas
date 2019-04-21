@@ -25,6 +25,7 @@ export const Audios = [
     media('chingawat.jpg', 'chingawat.mp3', true, '', 'Machete Chingawat!?'),
     media('risa.jpg', 'risa.mp3', true),
     media('no_lo_puedo_creer.jpg', 'no_lo_puedo_creer.mp3', true, '', 'Uy no lo puedo creer'),
+    media('ni_me_sorprende.jpg', 'ni_me_sorprende.mp3', true, '', 'Ni me sorprende'),
     media('thats_awesome.jpg', 'thats_awesome.mp3', true, '', 'Duuuude that\'s awesome!'),
     media('bojack_what.jpg', 'bojack_what.mp3', true, '', 'Whaaaaaaat?'),
     media('sure.jpg', 'sure.mp3', true, '', 'Sure!'),
