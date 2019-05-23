@@ -5,6 +5,15 @@
         <h1 class="title is-1">Botonera así nomás</h1>
       </div>
     </section>
+    <section class="section has-no-bottom-padding">
+      <div class="container">
+        <share-button
+          url="https://botonera.net"
+          title="Botonera así nomás"
+          description="Botonera para Te Lo Resumo Así Nomás. Increiiiiiible!"
+        ></share-button>
+      </div>
+    </section>
     <section class="section">
       <div class="container">
         <div class="level">
@@ -64,10 +73,11 @@
 
 <script>
 
+import downloader from 'downloadjs';
 import PlayButton from './components/play-button.vue';
 import PageFooter from './components/page-footer.vue';
+import ShareButton from './components/share-button';
 import { Audios, Music } from './services/Audios';
-import downloader from 'downloadjs';
 
 const getAudioData = ([imgUrl, soundUrl, autoFetch, name, imgAlt]) => ({ soundUrl, imgUrl, autoFetch, name, imgAlt });
 
@@ -80,7 +90,8 @@ export default {
   }),
   components: {
     PlayButton,
-    PageFooter
+    PageFooter,
+    ShareButton
   },
   mounted() {
   },
@@ -113,6 +124,10 @@ export default {
 
 .section.has-no-top-padding {
     padding-top: 0;
+}
+
+.section.has-no-bottom-padding {
+    padding-bottom: 0;
 }
 
 .notification.download-info {
