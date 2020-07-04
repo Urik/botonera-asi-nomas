@@ -37,6 +37,7 @@ export const Audios = [
     media('pero_pero_pero.jpg', 'pero_pero_pero.mp3', true, '', 'Pero pero peroooo'),
     media('aaa.jpg', 'aaa.mp3', true, '', 'Aaaaaaaaaaaaaaaaah'),
     media('ackbar.jpg', 'ackbar.mp3', true, '', 'It\'s a trap!'),
+    media('perder_la_fe.jpg', 'perder_la_fe.mp3', true, '', 'Nunca hay que perder la fe!'),
     media('canchero1.jpg', 'canchero1.mp3', true, '', 'Canchero 1'),
     media('canchero2.jpg', 'canchero2.mp3', true, '', 'Canchero 2'),
     media('velociraptor1.jpg', 'defenderlo.mp3', true, '', 'Este tipo es re canchero, voy a defenderlo'),
