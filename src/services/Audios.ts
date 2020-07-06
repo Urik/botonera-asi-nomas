@@ -29,6 +29,7 @@ export const Audios = [
     media('thats_awesome.jpg', 'thats_awesome.mp3', true, '', 'Duuuude that\'s awesome!'),
     media('bojack_what.jpg', 'bojack_what.mp3', true, '', 'Whaaaaaaat?'),
     media('sure.jpg', 'sure.mp3', true, '', 'Sure!'),
+    media('bien_hecho.jpg', 'bien_hecho.mp3', true, '', 'Bien hecho!'),
     media('you_must_be_kidding.jpg', 'you_must_be_kidding.mp3', true, '', 'You must be kidding'),
     media('maradona1.jpg', 'maradona1.mp3', true, '', 'Maradona decile no a las drogas'),
     media('patranas.jpg', 'patranas.mp3', true, '', 'Patrañas!'),
